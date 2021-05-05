@@ -1,26 +1,13 @@
-spring:
-  profiles:
+spring: 
+  profiles: 
     active: dev
-
----
-spring:
-  profiles: prod
-  application:
-    name: config-single-client
-  cloud:
-     config:
-       uri: http://localhost:3301
-       label: master
-       profile: prod
-
-
 ---
 spring:
   profiles: dev
-  application:
-    name: config-single-client
-  cloud:
-     config:
-       uri: http://localhost:3301
-       label: master
-       profile: dev
+    application:   
+      name: microservicecloud-config-study-dev
+---
+spring:       
+  profiles: test
+    application: 
+      name: microservicecloud-config-study-test
