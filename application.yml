@@ -3,11 +3,11 @@ spring:
     active: dev
 ---
 spring:
-  profiles: dev
-    application:
+  profiles: dev  # 开发环境
+  application:
       name: microservicecloud-config-study-dev
 ---
 spring:      
-  profiles: test
-    application:
+  profiles: test    # 测试环境
+  application:
       name: microservicecloud-config-study-test
