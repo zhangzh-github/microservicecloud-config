@@ -1,18 +1,6 @@
-spring: 
-  profiles: 
-    active: dev
----
 spring:
-  profiles: dev       #开发环境
-    application:   
-      name: microservicecloud-config-study-dev
----
-spring:       
-  profiles: test     #测试环境
-    application: 
-      name: microservicecloud-config-study-test
-      
- #  请保存为UTF-8格式
+  profiles:
+    active: dev
 
 ---
 spring:
@@ -24,3 +12,15 @@ spring:
        uri: http://localhost:3301
        label: master
        profile: prod
+
+
+---
+spring:
+  profiles: dev
+  application:
+    name: config-single-client
+  cloud:
+     config:
+       uri: http://localhost:3301
+       label: master
+       profile: dev
